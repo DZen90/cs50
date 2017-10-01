@@ -10,5 +10,3 @@
 10. 1
 11. fseek skips padding by adding calculated number of bytes to cursor position in the file
 12. SEEK_CUR is current position of the cursor in file.
-
-13. It was colonel Mustard with the candlestick in the library.
