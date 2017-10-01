@@ -1,0 +1,12 @@
+1.  stdint.h declares sets of integer types with specified width.
+2.  Those types have certain exact widths, they are used in bmp headers.
+3.  BYTE - 1, DWORD - 4, LONG - 4, WORD - 2.
+4.  0x4D42 or "BM"
+5.  bfSize is the size of the bitmap file, biSize is the size of the structure BITMAPINFOHEADER
+6.  If biHeight is negative the file is a top-down bitmap with its origin in the upper-left corner
+7.  biBitCount specifies color depth
+8.  fopen may return null if file cannot be opened: user doesn't have a permission to create files or not enough space
+9.  The third argument is a number of elements to read. We read RGB triple structs one by one.
+10. 1
+11. fseek skips padding by adding calculated number of bytes to cursor position in the file
+12. SEEK_CUR is current position of the cursor in file.
