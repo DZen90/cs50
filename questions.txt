@@ -1,0 +1,13 @@
+0.  A synonym for the disease known as silicosis
+1.  Gets resource usage
+2.  16
+3.  So we don't have to copy their content
+4.  After opening the text the first character of the text is assigned to c. 
+In each iteration of the loop the next character from the text is assigned to c, until end of file is reached. 
+C is checked, if it is an alphabetical character. If it is then it is added to the array word[].
+If it isn't then is is either the end of the word (then check the word) or a digit (then skip the rest of the word).
+If the word is too long, then it is skipped.
+5.  If the word is too long, or if it contains digits, or there are no whitespace characters at all - 
+fscanf will still read the whole word, and we will have to check it all for inappropriate characters, 
+while fgetc allows us to check the characters before adding it to the word.
+6.  So we cannot change the value of the parameters inside the functions.
