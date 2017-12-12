@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <form action="{{ url_for('index') }}" method="get">
+        <fieldset>
+            <div class="form-group">
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Shares</th>
+                        <th>Price</th>
+                        <th>Value</th>
+                    </tr>
+                    {% for stock in stocks %}
+                    <tr>
+                        <td>{{ stock.name }}</td>
+                        <td>{{ stock.amount }}</td>
+                        <td>${{ stock.price }}</td>
+                        <td>${{ stock.value }}</td>
+                    </tr>
+                    {% endfor %}
+                    <tr>
+                        <td colspan="3">CASH</td>
+                        <td>${{ cash }}</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Total value</td>
+                        <td>${{ total_value }}</td>
+                    </tr>
+                </table>
+            </div>
+        </fieldset>
+    </form>
+{% endblock %}
